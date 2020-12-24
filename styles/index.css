@@ -13,6 +13,8 @@
   content: url(../images/spread.jpg);
   width: 120vw;
   height: 120vh;
+  padding: 0;
+  margin: 0;
 }
 
 /* -- text --*/
