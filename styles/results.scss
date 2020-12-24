@@ -1,0 +1,160 @@
+/* -- general -- */ 
+
+#results-grid {
+    grid-template-columns: auto;
+    grid-template-rows: 5vh 15vh auto;
+    overflow: auto;
+    justify-items: center;
+}
+
+.heading {
+    grid-row: 2;
+}
+
+/* -- card images -- */
+
+.card {
+    height: 30vh;
+    min-height: 200px;
+    width: auto;
+    margin: 0 auto;
+}
+
+/* -- nav --*/
+
+.nav {
+    position: fixed;
+    top: 0;
+    right: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    justify-content: space-around;
+
+}
+
+.nav-link {
+    display: flex;
+    justify-content: row;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.nav-icon {
+    height: 20px;
+    width: auto;
+    padding-right: 5px;
+}
+
+#info-icon {
+    content:url(../images/info.png);
+}
+
+#home-icon {
+    content:url(../images/home.png);
+}
+
+#home-link:hover #home-icon {
+    content:url(../images/home-hover.png);
+}
+
+#info-link:hover #info-icon {
+    content:url(../images/info-hover.png);
+}
+
+/* -- results --*/
+
+.results-box {
+    grid-row: 3;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.result {
+    height: 60vh;
+    width: 25vw;
+}
+
+.result h2, .result h3 {
+    text-align: center;
+}
+
+/* -- pop-up -- */
+
+#pop-up-grid {
+    display: none;
+    grid-template-columns: 20vw auto 20vw;
+    grid-template-rows: 10vh auto 10vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+}
+
+.pop-up {
+    background-color: grey;
+    grid-row: 2;
+    grid-column: 2;
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 30% 65% 5%;
+    grid-template-rows: auto 40px;
+}
+
+#pop-image {
+    grid-column: 1;
+    grid-row: 1;
+    width: 90%;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+}
+
+#pop-name {
+    text-align: center;
+}
+
+.pop-info {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.pop-buttons {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+/* -- pop-up animations */
+
+@keyframes reveal {
+    from {display: none;}
+    to {display: grid;}
+}
+
+.reveal {
+    animation: reveal;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+/* -- resizing -- */
+
+@media (max-width: 800px) {
+    .results-box {
+        flex-direction: column;
+    }
+    .result {
+        width: 80vw;
+        height: auto;
+        margin: 0 auto;
+    }
+  }
