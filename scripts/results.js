@@ -5,6 +5,8 @@ var cardTwo = cardList[localStorage.getItem('card two')];
 
 // this is all the functions we want to run on start up
 fillText()
+preloadImage("../images/home-hover.png")
+preloadImage("../images/info-hover.png")
 
 // fills out all three of the card results
 function fillText() {
@@ -45,7 +47,7 @@ function whichButton(btn) {
     }
 }
 
-// pop { name value meaning meaning-rev description } button-wikipedia
+// fills the pop up with the relevant information
 function fillPopup(card) {
     document.getElementById("pop-name").innerHTML = card["name"]
     document.getElementById("pop-value").innerHTML = `<b>Value</b>: ${card["value_int"]}`
@@ -57,6 +59,7 @@ function fillPopup(card) {
     document.getElementById("form-wikipedia").setAttribute("action", card["wiki"])
 }
 
+// finally, shows the pop up
 function revealPopup() {
     document.getElementById("pop-up-grid").style.display = "grid"
 } 
@@ -64,7 +67,7 @@ function revealPopup() {
 // "Close" button
 document.getElementById("button-close").addEventListener("click", hidePopup)
 
-
+// hides the pop up
 function hidePopup() {
     document.getElementById("pop-up-grid").style.display = "none"
 }

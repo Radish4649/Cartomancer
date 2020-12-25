@@ -35,11 +35,16 @@ h2, h3 {
 button, input {
   height: 32px;
   width: auto;
-  min-width: 100px;
   background-color: black;
   border-color: black;
   border-radius: 10px;
   color: white;
+}
+
+button:hover, input:hover {
+  background-color: white;
+  border-color: white;
+  color: black;
 }
 
 /* == LOADER == */

@@ -5,6 +5,12 @@ Thank you to ekelen for use of their tarot API
 
 const getCardImage = (card) => `url(cards/${card}.jpg)` 
 
+function preloadImage(url)
+{
+    var img=new Image();
+    img.src=url;
+}
+
 var cardList = [
       {
         "type": "major",

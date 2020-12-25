@@ -11,8 +11,8 @@
 
 #sliding-image {
   content: url(../images/spread.jpg);
-  width: 120vw;
   height: 120vh;
+  position: absolute;
   padding: 0;
   margin: 0;
 }
@@ -50,6 +50,7 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 150px;
 }
 
 form {
