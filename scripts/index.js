@@ -1,4 +1,4 @@
-const bg = document.querySelector('#sliding-image');
+const bg = document.querySelector('.mouse-move');
 const windowWidth = window.innerWidth / 5;
 const windowHeight = window.innerHeight / 5 ;
 

@@ -12,14 +12,17 @@
 #sliding-image {
   content: url(../images/spread.jpg);
   height: 120vh;
+  min-width: 100vw;
   position: absolute;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 /* -- text --*/
 .title-text {
   color: black;
+  text-shadow: 2px 2px gray;
 }
 
 h2 {
